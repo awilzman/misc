@@ -181,10 +181,6 @@ model.fit(x_train, y_train)
 # Test the model
 y_pred = model.predict(x_test)
 
-# Since you're predicting a binary outcome, you might want to convert the predictions to boolean
-# For example, rounding the predictions to the nearest integer (0 or 1)
-y_pred_binary = np.round(y_pred)
-
 # Evaluate the model's performance
 [lm_train_metrics,lm_test_metrics] = model_eval_supervised(x_train,x_test,y_train,y_test,model,device)
 
